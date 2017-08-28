@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Open Source Font Combinations</title>
+  <meta name="description" content="Exploring the possibilites of Open Source fonts">
+
+  <link rel="stylesheet" href="/font-combinations/css/styles.css">
+  <link rel="canonical" href="http://localhost:4000/font-combinations/">
+
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#171717">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="theme-color" content="#171717">
+</head>
+
+<body>
+  <div class="global-wrapper">
+    <header class="main-header" data-header>
+  <h1>Opensource Fonts</h1>
+</header>
+
+    <main class="main-content">
+
+    </main>
+    <footer>
+  <div class="footer-content">
+    <div class="footer-content-wrapper">
+      <p><a class="license" href="https://github.com/MattGreyDesign/mattgreydesign.github.io/blob/master/LICENSE" title="View the license for this site and it's content"><small>All content is Copyright &copy; 2010 - <script type="text/javascript">document.write(new Date().getFullYear());</script><noscript>2017</noscript> Matthew Grey</small></a></p>
+      <a class="made-by" href="//github.com/MattGreyDesign/mattgreydesign.github.io">Made by Matt</a>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):e.Headspace=t()}(this,function(){"use strict";function e(s){var n=arguments.length<=1||void 0===arguments[1]?{}:arguments[1];if(!(this instanceof e))return new(Function.prototype.bind.apply(e,[null].concat(Array.prototype.slice.call(arguments))));this.element=s,this.startOffset=t(n.startOffset,s&&s.offsetHeight),this.tolerance=t(n.tolerance,8),this.showAtBottom=t(n.showAtBottom,!0),this.classNames=n.classNames||{base:"headspace",fixed:"headspace--fixed",hidden:"headspace--hidden"},this._scrollLast=0,"undefined"!=typeof window&&this.init()}function t(e,t){return void 0!==e?e:t}function s(e){var t=window.pageYOffset,s=e._scrollLast;t<=0?e.reset():e.showAtBottom&&window.innerHeight+t>=document.body.offsetHeight?e.fix():t>e.startOffset&&Math.abs(t-s)>=e.tolerance&&e[t>s?"hide":"fix"](),e._scrollLast=t}return e.prototype={init:function(){var e=this;this.addClass(this.classNames.base),window.addEventListener("scroll",function(){return e.debounce(function(){return s(e)})})},reset:function(){var e=this.classNames;this.removeClass(e.fixed,e.hidden)},fix:function(){var e=this.classNames;this.addClass(e.fixed),this.removeClass(e.hidden)},hide:function(){this.addClass(this.classNames.hidden)},addClass:function(){var e;(e=this.element.classList).add.apply(e,arguments)},removeClass:function(){var e;(e=this.element.classList).remove.apply(e,arguments)},debounce:function(e){window.requestAnimationFrame(e)}},e.isSupported=function(){return!!("undefined"!=typeof window&&window.requestAnimationFrame&&"classList"in document.documentElement)},e});
+
+
+$(function () {
+  Headspace(document.querySelector('[data-header]'), {
+    startOffset: 90,
+    tolerance: 5,
+    showAtBottom: false,
+    classNames: {
+      base: 'sticky-header',
+      fixed: 'sticky-header--fixed',
+      hidden: 'sticky-header--hidden'
+    }
+  })
+}());
+
+</script>
+
+  </div>
+</body>
+</html>
